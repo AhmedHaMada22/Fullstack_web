@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <h3>FCI</h3>
+  <p>id</p>
+  <input type="text" placeholder="id" class="form-control" [(ngModel)]="id" />
+  <p>Name</p>
+  <input type="text" placeholder="name" class="form-control" [(ngModel)]="name" />
+  <p>Address</p>
+  <input type="text" placeholder="address" class="form-control" [(ngModel)]="address" />
+  <p>Age</p>
+  <input type="text" placeholder="age" class="form-control" [(ngModel)]="age" />
+  <span>Gender</span>
+  <input type="checkbox" [(ngModel)]="gender" />
+  <br />
+  <button class="btn btn-primary" (click)="Add_data()">Add data</button>
+
+  <table class="table table-border table-hovered">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let item of customers">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.address}}</td>
+      
+      <td>
+        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-secondary">View</button>
+
+      </td>
+
+    </tr>
+
+  </table>
+</body>
+</html>
